@@ -1,0 +1,24 @@
+table,
+td,
+th {
+    border: 3px solid;
+}
+
+.content {
+    text-align: center;
+    position: inherit;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 40%;
+    border-radius: 3px;
+}
+
+.clues{
+    text-align: center;
+    position: inherit;
+    margin: auto;
+    width: 40%;
+    height: 40%;
+    border-radius: 3px;
+}
