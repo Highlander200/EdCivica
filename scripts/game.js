@@ -7,6 +7,7 @@ let rightSound=document.querySelector("#rightSound");
 let wrongSound=document.querySelector("#wrongSound");
 var questions = ["Che stanza è 1", "Che stanza è 2"];
 var level=0;
+
 function newLevel(){
     level++;
     h1.innerHTML=questions[level];
