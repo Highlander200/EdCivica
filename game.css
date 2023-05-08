@@ -1,7 +1,7 @@
-table,
-td,
-th {
-    border: 3px solid;
+.tabella{
+    padding-left: 30%;
+    padding-right: 30%;
+    text-align: center;
 }
 
 .content {
@@ -21,4 +21,9 @@ th {
     width: 40%;
     height: 40%;
     border-radius: 3px;
+}
+
+.input-group{
+    padding-right: 25%;
+    padding-left: 25%;
 }
