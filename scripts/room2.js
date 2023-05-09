@@ -1,14 +1,14 @@
 var body = document.querySelector("body");
-var button = document.querySelector("#checkInput");
+var button = document.getElementById("checkInput");
 var h1 = document.querySelector("h1");
 
-var passcode_input = document.querySelector("#passcode_input");
-var rightSound = document.querySelector("#rightSound");
-var wrongSound = document.querySelector("#wrongSound");
+var inputs = [];
+var rightSound = document.getElementById("rightSound");
+var wrongSound = document.getElementById("wrongSound");
 
 button.addEventListener("click", check);
 
-passcode_input.addEventListener("keypress", function (event) {
+body.addEventListener("keypress", function (event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
         // Cancel the default action, if needed
@@ -18,7 +18,9 @@ passcode_input.addEventListener("keypress", function (event) {
     }
 });
 
-
+for(let i=1;i<=5;i++){
+    inputs[i-1]=document.getElementById("check"+i);
+}
 
 function newLevel() {
     window.location.href = "room3.html";
@@ -26,28 +28,29 @@ function newLevel() {
 
 function reset() {
     body.style.background = "white";
-    button.innerHTML = "Check input";
-    h1.innerHTML = "Escape Room";
-    passcode_input.value = "";
+    button.innerHTML = "Enter";
+    h1.innerHTML = "Quiz Livello 2";
 }
 
 function check() {
-    let passcode = passcode_input.value;
-    if (passcode == "room1") {
-        h1.innerHTML = "Second level passed!";
+    let isRight=false;
+    isRight=!inputs[0].checked && inputs[1].checked && !inputs[2].checked && inputs[3].checked && inputs[4].checked;
+    
+    if (isRight==true) {
+        h1.innerHTML = "Secondo livello superato!";
         body.style.background = "lightgreen";
-        button.innerHTML = "You win!";
+        button.innerHTML = "Hai vinto!";
         rightSound.currentTime = 0;
         rightSound.play();
 
         setTimeout(newLevel, 4000);
     } else {
         h1.innerHTML = "💀💀💀💀💀";
-        body.style.background = "crimson";
-        button.innerHTML = "Try again!";
+        body.style.background = "brown";
+        button.innerHTML = "Riprova!";
         wrongSound.currentTime = 0;
         wrongSound.play();
 
-        setTimeout(reset, 1000);
+        setTimeout(reset, 2000);
     }
 }

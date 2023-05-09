@@ -8,8 +8,8 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="./style/style.css" rel="stylesheet">
     <link href="./style/game.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
 
     <title>Game</title>
 </head>
@@ -53,53 +53,67 @@
     <audio src="./audios/wrong.mp3" id="wrongSound"></audio>
 
 
-    <div class="content">
-        <h1>Escape Room</h1>
-        <p>Enter the secret code below to escape from the room:</p>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Secret Code:</span>
-            <input type="text" class="form-control" id="passcode_input" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-        <button type="button" class="btn btn-primary" id="checkInput">Check input</button>
+    <div class="container content">
+        <h1>Quiz Livello 2</h1>
+        <p>Inserisci le risposte per andare alla prossimo livello:</p>
     </div>
 
-    <div class="tabella">
-        <h2>CLUES</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                </tr>
-            </tbody>
-    </div>
+    <div class="content container">
+        <h3>Quali di questi materiali è usato nei cellulari, che se non smaltiti correttamente danneggiano l'ambiente?</h3>
+        <div class="mt-3"> <!-- aggiunta della classe "text-center" -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check1">
+                <label class="form-check-label" for="defaultCheck1">
+                    Legno
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check2">
+                <label class="form-check-label" for="defaultCheck1">
+                    Plastica
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check3">
+                <label class="form-check-label" for="defaultCheck1">
+                    Ceramica
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check4">
+                <label class="form-check-label" for="defaultCheck1">
+                    Rame
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="check5">
+                <label class="form-check-label" for="defaultCheck1">
+                    Litio
+                </label>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary mt-4" id="checkInput">Enter</button>
+
+    </div> 
 
 
 
     <script src="./scripts/main.js"></script>
-    <script src="./scripts/room3.js"></script>
+    <script src="./scripts/room2.js"></script>
 
     <footer class="fixed-bottom py-3 pt-5">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
-            <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/" class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1" aria-hidden="true"></i>Instagram</a></li>
-            <li class="nav-item"><a href="https://github.com/Highlander200" class="nav-link px-2 text-body-secondary"><i class="fa fa-github me-1" aria-hidden="true"></i>GitHub</a></li>
-            <li class="nav-item"><a href="https://www.ittgiorgi.edu.it/" class="nav-link px-2 text-body-secondary"><i class="fa fa-graduation-cap me-1" aria-hidden="true"></i>Scuola</a></li>
-            <li class="nav-item"><a href="source.zip" class="nav-link px-2 text-body-secondary"><i class="fa fa-file-code-o me-1" aria-hidden="true"></i>Sorgente</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/"
+                    class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1"
+                        aria-hidden="true"></i>Instagram</a></li>
+            <li class="nav-item"><a href="https://github.com/Highlander200" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-github me-1" aria-hidden="true"></i>GitHub</a></li>
+            <li class="nav-item"><a href="https://www.ittgiorgi.edu.it/" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-graduation-cap me-1" aria-hidden="true"></i>Scuola</a></li>
+            <li class="nav-item"><a href="source.zip" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-file-code-o me-1" aria-hidden="true"></i>Sorgente</a></li>
         </ul>
         <p class="text-center text-body-secondary">Aiello Giuseppe 4DI a.s. 2022/23</p>
         <p class="text-center text-body-secondary">giuseppe.2006@outlook.com</p>

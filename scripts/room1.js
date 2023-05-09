@@ -1,15 +1,14 @@
 var body = document.querySelector("body");
-var button = document.querySelector("#checkInput");
+var button = document.getElementById("checkInput");
 var h1 = document.querySelector("h1");
 
-
-var passcode_input = document.getElementById("passcode_input");
-var rightSound = document.querySelector("#rightSound");
-var wrongSound = document.querySelector("#wrongSound");
+var passcodeInput = document.getElementById("passcodeInput");
+var rightSound = document.getElementById("rightSound");
+var wrongSound = document.getElementById("wrongSound");
 
 button.addEventListener("click", check);
 
-passcode_input.addEventListener("keypress", function (event) {
+body.addEventListener("keypress", function (event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
         // Cancel the default action, if needed
@@ -19,36 +18,33 @@ passcode_input.addEventListener("keypress", function (event) {
     }
 });
 
-
-
 function newLevel() {
     window.location.href = "room2.html";
 }
 
 function reset() {
     body.style.background = "white";
-    button.innerHTML = "Check input";
-    h1.innerHTML = "Escape Room";
-    passcode_input.value = "";
+    button.innerHTML = "Enter";
+    h1.innerHTML = "Quiz Livello 1";
 }
 
 function check() {
-    let passcode = passcode_input.value;
-    if (passcode == "room1") {
-        h1.innerHTML = "First level passed!";
+    let passcode = passcodeInput.value;
+    if (passcode == "3") {
+        h1.innerHTML = "Primo livello superato!";
         body.style.background = "lightgreen";
-        button.innerHTML = "You win!";
+        button.innerHTML = "Hai vinto!";
         rightSound.currentTime = 0;
         rightSound.play();
 
         setTimeout(newLevel, 4000);
     } else {
         h1.innerHTML = "💀💀💀💀💀";
-        body.style.background = "crimson";
-        button.innerHTML = "Try again!";
+        body.style.background = "brown";
+        button.innerHTML = "Riprova!";
         wrongSound.currentTime = 0;
         wrongSound.play();
 
-        setTimeout(reset, 1000);
+        setTimeout(reset, 2000);
     }
 }

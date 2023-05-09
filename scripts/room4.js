@@ -18,15 +18,15 @@ passcode_input.addEventListener("keypress", function (event) {
     }
 });
 
-function setCookie(cname, cvalue) {
+function setCookie(cname, cvalue,cexpd) {
     const d = new Date();
-    d.setTime(d.getTime() + (24*60*60*1000));
+    d.setTime(d.getTime() + (cexpd*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function newLevel(){
-    setCookie("secret","true");
+    setCookie("secret","true",1);
     window.location.href="win.html";
 }
 

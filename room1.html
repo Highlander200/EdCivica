@@ -8,7 +8,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="./style/style.css" rel="stylesheet">
     <link href="./style/game.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Game</title>
@@ -53,30 +53,36 @@
     <audio src="./audios/wrong.mp3" id="wrongSound"></audio>
 
 
-    <div class="content">
-        <h1>Escape Room</h1>
-        <p>Enter the secret code below to escape from the room:</p>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Secret Code:</span>
-            <input type="text" class="form-control" id="passcode_input" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default">
-        </div>
-        <button type="button" class="btn btn-primary" id="checkInput">Check input</button>
+    <div class="container content">
+        <h1>Quiz Livello 1</h1>
+        <p>Inserisci la risposta per andare alla prossimo livello:</p>
     </div>
 
-    <div class="tabella">
-        <h2>CLUES</h2>
-        <table class="table">
+    <div class="tabella container table-responsive">
+        <h3>Quale delle seguenti opzioni rappresenta una soluzione per ridurre l'impatto ambientale dell'addestramento
+            delle intelligenze artificiali?</h3>
+        <table class="table mt-3">
             <tbody>
                 <tr>
-                    <td scope="row">Mark</td>
-                    <td scope="row">Otto</td>
+                    <td scope="row">A) Addestrare le IA utilizzando solo fonti di energia non rinnovabili</td>
+                    <td scope="row">B) Utilizzare algoritmi di apprendimento automatico più complessi e pesanti per
+                        l'addestramento delle IA</td>
                 </tr>
                 <tr>
-                    <td scope="row">Jacob</td>
-                    <td scope="row">Thornton</td>
+                    <td scope="row">C) Adottare fonti energetiche rinnovabili per alimentare i centri di elaborazione
+                        dati utilizzati per l'addestramento delle IA</td>
+                    <td scope="row">D) Utilizzare grandi quantità di dati per addestrare le IA senza alcuna
+                        preoccupazione per l'impatto ambientale</td>
                 </tr>
             </tbody>
+        </table>
+        <select class="form-select form-select-lg mt-5" aria-label="Default select example" id="passcodeInput">
+            <option value="1" selected>A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+        </select>
+        <button type="button" class="btn btn-primary mt-4" id="checkInput">Enter</button>
     </div>
 
 
@@ -86,11 +92,17 @@
 
     <footer class="fixed-bottom py-3 pt-5">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
-            <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/" class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1" aria-hidden="true"></i>Instagram</a></li>
-            <li class="nav-item"><a href="https://github.com/Highlander200" class="nav-link px-2 text-body-secondary"><i class="fa fa-github me-1" aria-hidden="true"></i>GitHub</a></li>
-            <li class="nav-item"><a href="https://www.ittgiorgi.edu.it/" class="nav-link px-2 text-body-secondary"><i class="fa fa-graduation-cap me-1" aria-hidden="true"></i>Scuola</a></li>
-            <li class="nav-item"><a href="source.zip" class="nav-link px-2 text-body-secondary"><i class="fa fa-file-code-o me-1" aria-hidden="true"></i>Sorgente</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/"
+                    class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1"
+                        aria-hidden="true"></i>Instagram</a></li>
+            <li class="nav-item"><a href="https://github.com/Highlander200" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-github me-1" aria-hidden="true"></i>GitHub</a></li>
+            <li class="nav-item"><a href="https://www.ittgiorgi.edu.it/" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-graduation-cap me-1" aria-hidden="true"></i>Scuola</a></li>
+            <li class="nav-item"><a href="source.zip" class="nav-link px-2 text-body-secondary"><i
+                        class="fa fa-file-code-o me-1" aria-hidden="true"></i>Sorgente</a></li>
         </ul>
         <p class="text-center text-body-secondary">Aiello Giuseppe 4DI a.s. 2022/23</p>
         <p class="text-center text-body-secondary">giuseppe.2006@outlook.com</p>
