@@ -18,6 +18,17 @@ passcode_input.addEventListener("keypress", function (event) {
     }
 });
 
+function setCookie(cname, cvalue) {
+    const d = new Date();
+    d.setTime(d.getTime() + (24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function newLevel(){
+    setCookie("secret","true");
+    window.location.href="win.html";
+}
 
 function reset() {
     body.style.background = "white";
@@ -29,7 +40,7 @@ function reset() {
 function check() {
     let passcode = passcode_input.value;
     if (passcode == "room1") {
-        h1.innerHTML = "The password is: admin";
+        h1.innerHTML = "Fourth level passed!<br>You can now go to the secret page!";
         body.style.background = "lightgreen";
         button.innerHTML = "You win!";
         rightSound.currentTime = 0;

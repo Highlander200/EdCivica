@@ -2,7 +2,8 @@ var body = document.querySelector("body");
 var button = document.querySelector("#checkInput");
 var h1 = document.querySelector("h1");
 
-var passcode_input = document.querySelector("#passcode_input");
+
+var passcode_input = document.getElementById("passcode_input");
 var rightSound = document.querySelector("#rightSound");
 var wrongSound = document.querySelector("#wrongSound");
 

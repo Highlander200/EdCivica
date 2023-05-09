@@ -2,3 +2,37 @@
     margin-left: 10%;
     margin-right: 10%;
 }
+
+.content {
+    margin-top: 3%;
+}
+
+h1 {
+    margin-bottom: 1%;
+}
+
+p {
+    font-size: larger;
+}
+
+img {
+    height: 50%;
+    width: 50%;
+}
+
+.immagine {
+    text-align: center;
+}
+
+footer a{
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+footer a:hover {
+    color: #24262b;
+    background-color: cyan;
+}

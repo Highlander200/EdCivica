@@ -7,16 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="./style/style.css" rel="stylesheet">
-    <link href="./style/secret.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
     <title>INDEX</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-primary " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid container">
             <a class="navbar-brand" href="./index.html">
                 Home
@@ -39,7 +38,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="./room1.html">Game!</a>
+                        <a class="nav-link" href="./room1.html">Game!</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" id="secretPage">Secret Page</a>
@@ -49,19 +48,65 @@
         </div>
     </nav>
 
-    <div class="content">
-        <h1>Have you finished the escape room?</h1>
-
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="inputGroup-sizing-default">Insert the password</span>
-            <input type="text" class="form-control" aria-label="Sizing example input"
-                aria-describedby="inputGroup-sizing-default" id="passcode_input">
-            <button class="btn btn-outline-primary" type="button" id="checkInput">Button</button>
+    <div class="container content">
+        <h1>L'inquinamento delle IA</h1>
+        <p>
+            Le intelligenze artificiali (IA) sono diventate una parte sempre più importante della nostra vita
+            quotidiana.
+            Dalla guida autonoma ai chatbot, dall'elaborazione del linguaggio naturale alle previsioni del tempo, le IA
+            hanno dimostrato di poter offrire soluzioni più efficienti e precise rispetto ai metodi tradizionali.
+            Tuttavia,
+            il loro impatto ambientale per l'addestramento può essere significativo.
+        </p>
+        <p>
+            Le IA richiedono una grande quantità di dati per essere addestrate correttamente. Ciò significa che molti
+            algoritmi di apprendimento automatico richiedono enormi quantità di energia per elaborare e analizzare
+            questi
+            dati. Inoltre, le IA devono essere addestrate continuamente per mantenere le loro capacità, il che significa
+            che
+            questo processo richiede energia e risorse continue.
+        </p>
+        <div class="immagine">
+            <img src="./images/ia-elettricità.jpg">
         </div>
+        <p>
+            Tuttavia, il problema più grande riguarda l'origine dell'energia utilizzata per alimentare i centri di
+            elaborazione dati utilizzati per addestrare le IA. Gran parte dell'energia utilizzata proviene ancora da
+            fonti
+            non rinnovabili, come il carbone o il gas naturale. Questo significa che il processo di addestramento delle
+            IA
+            può avere un impatto significativo sull'ambiente e sul clima.
+        </p>
+        <p>
+            Ci sono alcune soluzioni per mitigare questo impatto. Ad esempio, l'adozione di fonti energetiche
+            rinnovabili
+            può ridurre l'impatto ambientale dell'addestramento delle IA. Inoltre, gli sviluppatori possono cercare di
+            utilizzare algoritmi di apprendimento automatico più efficienti ed ecologici, come quelli basati
+            sull'apprendimento profondo sparsi (sparse deep learning).
+        </p>
+        <div class="immagine">
+            <img src="./images/ia-cervello.jpg">
+        </div>
+        <p>
+            Inoltre, gli sviluppatori possono cercare di ridurre la quantità di dati necessari per addestrare le IA. Ad
+            esempio, possono utilizzare tecniche di compressione dati o tecniche di riduzione del rumore per ridurre la
+            quantità di dati necessari per addestrare un algoritmo. In questo modo, si può limitare la quantità di
+            energia
+            necessaria per addestrare le IA e quindi il loro impatto ambientale.
+        </p>
+        <p>
+            In sintesi, le intelligenze artificiali hanno il potenziale per offrire soluzioni efficienti e precise per
+            molte
+            problematiche, ma la loro adozione deve tenere conto dell'impatto ambientale dell'addestramento. Gli
+            sviluppatori e gli utenti delle IA devono essere consapevoli di questo impatto e cercare di mitigarlo
+            utilizzando fonti energetiche rinnovabili e algoritmi più efficienti e sostenibili.
+        </p>
     </div>
 
 
-    <footer class="fixed-bottom py-3 pt-5">
+
+
+    <footer class="py-3 pt-5">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
             <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/" class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1" aria-hidden="true"></i>Instagram</a></li>
@@ -74,7 +119,9 @@
     </footer>
 
 
-    <script src="./scripts/secret.js"></script>
+
+
+    <script src="./scripts/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

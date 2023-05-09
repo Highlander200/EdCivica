@@ -14,5 +14,14 @@ function getCookie(cname) {
     return "";
 }
 
-let x=getCookie("secret");
-console.log(x);
+
+function checkSecretPage(){
+    let isQuizFinished=getCookie("secret");
+    if(isQuizFinished=="true"){
+        let secretLink=document.querySelector("#secretPage");
+        secretLink.classList="nav-link";
+        secretLink.href="./secret.html";
+    }
+}
+
+checkSecretPage();

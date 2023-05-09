@@ -8,6 +8,8 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="./style/style.css" rel="stylesheet">
     <link href="./style/game.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Game</title>
 </head>
@@ -16,10 +18,8 @@
 
     <nav class="navbar navbar-expand-lg bg-primary " data-bs-theme="dark">
         <div class="container-fluid container">
-            <a class="navbar-brand" href="#">
-                <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
-                    height="24" class="d-inline-block align-text-top">
-                Bootstrap
+            <a class="navbar-brand" href="./index.html">
+                Home
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,11 +27,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="./index.html">Home</a>
-                    <a class="nav-link active" aria-current="page" href="./room1.html">Game!</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link" href="./secret.html">Secret Page</a>
-
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            L'inquinamento
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./obsolescenza.html">Obsoloscenza informatica</a></li>
+                            <li><a class="dropdown-item" href="./IA.html">Addestramento IA</a></li>
+                            <li><a class="dropdown-item" href="./riciclo.html">Riciclo dell'hardware</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./room1.html">Game!</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" id="secretPage">Secret Page</a>
+                    </li>
                 </div>
             </div>
         </div>
@@ -55,23 +67,14 @@
     <div class="tabella">
         <h2>CLUES</h2>
         <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
+                    <td scope="row">Mark</td>
+                    <td scope="row">Otto</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
+                    <td scope="row">Jacob</td>
+                    <td scope="row">Thornton</td>
                 </tr>
             </tbody>
     </div>
@@ -81,16 +84,17 @@
     <script src="./scripts/main.js"></script>
     <script src="./scripts/room1.js"></script>
 
-    <div class="footer fixed-bottom">
+    <footer class="fixed-bottom py-3 pt-5">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary"><i class="fa fa-home me-1" aria-hidden="true"></i></i>Home</a></li>
+            <li class="nav-item"><a href="https://www.instagram.com/_giuseppe.aiello_/" class="nav-link px-2 text-body-secondary"><i class="fa fa-instagram me-1" aria-hidden="true"></i>Instagram</a></li>
+            <li class="nav-item"><a href="https://github.com/Highlander200" class="nav-link px-2 text-body-secondary"><i class="fa fa-github me-1" aria-hidden="true"></i>GitHub</a></li>
+            <li class="nav-item"><a href="https://www.ittgiorgi.edu.it/" class="nav-link px-2 text-body-secondary"><i class="fa fa-graduation-cap me-1" aria-hidden="true"></i>Scuola</a></li>
+            <li class="nav-item"><a href="source.zip" class="nav-link px-2 text-body-secondary"><i class="fa fa-file-code-o me-1" aria-hidden="true"></i>Sorgente</a></li>
         </ul>
-        <h5 class="text-center text-muted">© 2022 Company, Inc</h5>
-    </div>
+        <p class="text-center text-body-secondary">Aiello Giuseppe 4DI a.s. 2022/23</p>
+        <p class="text-center text-body-secondary">giuseppe.2006@outlook.com</p>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
