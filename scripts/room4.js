@@ -1,14 +1,14 @@
 var body = document.querySelector("body");
-var button = document.querySelector("#checkInput");
+var button = document.getElementById("checkInput");
 var h1 = document.querySelector("h1");
 
-var passcode_input = document.querySelector("#passcode_input");
-var rightSound = document.querySelector("#rightSound");
-var wrongSound = document.querySelector("#wrongSound");
+var inputs = [];
+var rightSound = document.getElementById("rightSound");
+var wrongSound = document.getElementById("wrongSound");
 
 button.addEventListener("click", check);
 
-passcode_input.addEventListener("keypress", function (event) {
+body.addEventListener("keypress", function (event) {
     // If the user presses the "Enter" key on the keyboard
     if (event.key === "Enter") {
         // Cancel the default action, if needed
@@ -17,6 +17,10 @@ passcode_input.addEventListener("keypress", function (event) {
         button.click();
     }
 });
+
+for(let i=1;i<=5;i++){
+    inputs[i-1]=document.getElementById("input"+i);
+}
 
 function setCookie(cname, cvalue,cexpd) {
     const d = new Date();
@@ -32,15 +36,14 @@ function newLevel(){
 
 function reset() {
     body.style.background = "white";
-    button.innerHTML = "Check input";
-    h1.innerHTML = "Escape Room";
-    passcode_input.value = "";
+    button.innerHTML = "Enter";
+    h1.innerHTML = "Quiz Livello 4";
 }
 
 function check() {
-    let passcode = passcode_input.value;
-    if (passcode == "room1") {
-        h1.innerHTML = "Fourth level passed!<br>You can now go to the secret page!";
+    let isRight = inputs[0].value=="energia-solare" && inputs[1].value=="energia-idroelettrica" && inputs[2].value=="energia-nucleare"  && inputs[3].value=="gas-naturale" && inputs[4].value=="carbone";
+    if (isRight == true) {
+        h1.innerHTML = "Quarto livello superato!<br>Adesso puoi andare alla pagina segreta!";
         body.style.background = "lightgreen";
         button.innerHTML = "You win!";
         rightSound.currentTime = 0;
@@ -49,7 +52,7 @@ function check() {
         setTimeout(newLevel, 4000);
     } else {
         h1.innerHTML = "💀💀💀💀💀";
-        body.style.background = "crimson";
+        body.style.background = "brown";
         button.innerHTML = "Try again!";
         wrongSound.currentTime = 0;
         wrongSound.play();

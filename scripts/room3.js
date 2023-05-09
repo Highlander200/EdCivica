@@ -26,6 +26,7 @@ function reset() {
     body.style.background = "white";
     button.innerHTML = "Enter";
     h1.innerHTML = "Quiz Livello 3";
+    passcodeInput.value="";
 }
 
 function check() {
