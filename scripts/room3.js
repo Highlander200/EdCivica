@@ -2,7 +2,7 @@ var body = document.querySelector("body");
 var button = document.getElementById("checkInput");
 var h1 = document.querySelector("h1");
 
-var inputs = [];
+var passcodeInput = document.getElementById("passcodeInput");
 var rightSound = document.getElementById("rightSound");
 var wrongSound = document.getElementById("wrongSound");
 
@@ -18,26 +18,20 @@ body.addEventListener("keypress", function (event) {
     }
 });
 
-for(let i=1;i<=5;i++){
-    inputs[i-1]=document.getElementById("check"+i);
-}
-
 function newLevel() {
-    window.location.href = "room3.html";
+    window.location.href = "room4.html";
 }
 
 function reset() {
     body.style.background = "white";
     button.innerHTML = "Enter";
-    h1.innerHTML = "Quiz Livello 2";
+    h1.innerHTML = "Quiz Livello 3";
 }
 
 function check() {
-    let isRight=false;
-    isRight=!inputs[0].checked && inputs[1].checked && !inputs[2].checked && inputs[3].checked && inputs[4].checked;
-    
-    if (isRight==true) {
-        h1.innerHTML = "Secondo livello superato!";
+    let passcode=passcodeInput.value.toLowerCase();
+    if (passcode=="migliorarlo") {
+        h1.innerHTML = "Terzo livello superato!";
         body.style.background = "lightgreen";
         button.innerHTML = "Hai vinto!";
         rightSound.currentTime = 0;
