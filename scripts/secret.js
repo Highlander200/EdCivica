@@ -22,7 +22,7 @@ function checkSecretPage(){
         secretLink.classList="nav-link active";
         secretLink.href="./secret.html";
     }else{
-        //window.location.href="index.html";
+        window.location.href="index.html";
     }
 }
 
