@@ -18,11 +18,11 @@ function getCookie(cname) {
 function checkSecretPage(){
     let isQuizFinished=getCookie("secret");
     if(isQuizFinished=="true"){
-        let secretLink=document.querySelector("#secretPage");
+        let secretLink=document.getElementById("secretPage");
         secretLink.classList="nav-link active";
         secretLink.href="./secret.html";
     }else{
-        window.location.href="index.html";
+        //window.location.href="index.html";
     }
 }
 

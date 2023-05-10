@@ -11,7 +11,14 @@
     height: 40%;
     border-radius: 3px;
 }
-
+.error{
+    width: 10%;
+    height: 10%;
+}
+img{
+    width: 40%;
+    height: 40%;
+}
 .clues {
     text-align: center;
     position: inherit;

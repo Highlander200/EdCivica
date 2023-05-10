@@ -5,6 +5,7 @@ var h1 = document.querySelector("h1");
 var inputs = [];
 var rightSound = document.getElementById("rightSound");
 var wrongSound = document.getElementById("wrongSound");
+var error = document.getElementById("error");
 
 button.addEventListener("click", check);
 
@@ -27,7 +28,7 @@ function newLevel() {
 }
 
 function reset() {
-    body.style.background = "white";
+    error.hidden=true;
     button.innerHTML = "Enter";
     h1.innerHTML = "Quiz Livello 2";
 }
@@ -46,7 +47,7 @@ function check() {
         setTimeout(newLevel, 4000);
     } else {
         h1.innerHTML = "💀💀💀💀💀";
-        body.style.background = "brown";
+        error.hidden=false;
         button.innerHTML = "Riprova!";
         wrongSound.currentTime = 0;
         wrongSound.play();
