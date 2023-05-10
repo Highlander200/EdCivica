@@ -1,3 +1,7 @@
+body{
+    position: relative;
+}
+
 .content {
     margin-top: 3%;
 }
@@ -19,6 +23,10 @@ img {
     text-align: center;
 }
 
+.footer{
+    width: 100%;
+}
+
 footer a{
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.2);
@@ -29,5 +37,5 @@ footer a{
 
 footer a:hover {
     color: #24262b;
-    background-color: cyan;
+    background-color: #0d6efd;
 }
